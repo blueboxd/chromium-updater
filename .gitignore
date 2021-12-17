@@ -65,6 +65,8 @@ DerivedData/
 
 # End of https://www.gitignore.io/api/xcode,macos
 
+*.xcscheme
+
 libs/
 plugins/
 *.psd

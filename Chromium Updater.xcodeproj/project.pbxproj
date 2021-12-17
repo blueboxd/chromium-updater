@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB6D5AFE275ABD9400895936 /* StatusMenuManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6D5AFD275ABD9400895936 /* StatusMenuManager.m */; };
+		FB6D5B01275AC27000895936 /* InstanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6D5B00275AC27000895936 /* InstanceManager.m */; };
+		FB6D5B04275AC35E00895936 /* SimpleCURL.m in Sources */ = {isa = PBXBuildFile; fileRef = FB6D5B03275AC35E00895936 /* SimpleCURL.m */; };
+		FB7EE9BC275AD84400895936 /* updater.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7EE9BB275AD84400895936 /* updater.png */; };
+		FB7EE9BE275AE78E00895936 /* xzdec in CopyFiles */ = {isa = PBXBuildFile; fileRef = FB7EE9BD275AE78D00895936 /* xzdec */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		FB7EE9C1275AF47E00895936 /* cacert.pem in Resources */ = {isa = PBXBuildFile; fileRef = FB7EE9C0275AF47E00895936 /* cacert.pem */; };
+		FBAF59EE275A0EFF00895936 /* crypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAF59EB275A0EFF00895936 /* crypto.a */; };
+		FBAF59EF275A0EFF00895936 /* ssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAF59EC275A0EFF00895936 /* ssl.a */; };
+		FBAF59F0275A0EFF00895936 /* curl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAF59ED275A0EFF00895936 /* curl.a */; };
+		FBAF59F2275A101700895936 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAF59F1275A101600895936 /* libz.tbd */; };
+		FBAF59F4275A10F100895936 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBAF59F3275A10F100895936 /* SystemConfiguration.framework */; };
+		FBAF59F9275A2A1D00895936 /* updater-c.png in Resources */ = {isa = PBXBuildFile; fileRef = FBAF59F8275A2A1D00895936 /* updater-c.png */; };
+		FBE6D6392759EB2F00895936 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D6382759EB2F00895936 /* AppDelegate.m */; };
+		FBE6D63B2759EB3000895936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE6D63A2759EB3000895936 /* Assets.xcassets */; };
+		FBE6D63E2759EB3000895936 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBE6D63C2759EB3000895936 /* MainMenu.xib */; };
+		FBE6D6412759EB3000895936 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE6D6402759EB3000895936 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FBAF59FA275A78FB00895936 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FB7EE9BE275AE78E00895936 /* xzdec in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FB6D5AFC275ABD9400895936 /* StatusMenuManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatusMenuManager.h; sourceTree = "<group>"; };
+		FB6D5AFD275ABD9400895936 /* StatusMenuManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusMenuManager.m; sourceTree = "<group>"; };
+		FB6D5AFF275AC27000895936 /* InstanceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstanceManager.h; sourceTree = "<group>"; };
+		FB6D5B00275AC27000895936 /* InstanceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstanceManager.m; sourceTree = "<group>"; };
+		FB6D5B02275AC35E00895936 /* SimpleCURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCURL.h; sourceTree = "<group>"; };
+		FB6D5B03275AC35E00895936 /* SimpleCURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCURL.m; sourceTree = "<group>"; };
+		FB7EE9BB275AD84400895936 /* updater.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = updater.png; path = resources/updater.png; sourceTree = SOURCE_ROOT; };
+		FB7EE9BD275AE78D00895936 /* xzdec */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = xzdec; path = plugins/xzdec; sourceTree = "<group>"; };
+		FB7EE9C0275AF47E00895936 /* cacert.pem */ = {isa = PBXFileReference; lastKnownFileType = text; name = cacert.pem; path = resources/cacert.pem; sourceTree = SOURCE_ROOT; };
+		FBAF59EB275A0EFF00895936 /* crypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = crypto.a; path = libs/crypto.a; sourceTree = "<group>"; };
+		FBAF59EC275A0EFF00895936 /* ssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = ssl.a; path = libs/ssl.a; sourceTree = "<group>"; };
+		FBAF59ED275A0EFF00895936 /* curl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = curl.a; path = libs/curl.a; sourceTree = "<group>"; };
+		FBAF59F1275A101600895936 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FBAF59F3275A10F100895936 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FBAF59F8275A2A1D00895936 /* updater-c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "updater-c.png"; path = "resources/updater-c.png"; sourceTree = SOURCE_ROOT; };
+		FBE6D6342759EB2F00895936 /* Chromium Updater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chromium Updater.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE6D6372759EB2F00895936 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FBE6D6382759EB2F00895936 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FBE6D63A2759EB3000895936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FBE6D63D2759EB3000895936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FBE6D63F2759EB3000895936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE6D6402759EB3000895936 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FBE6D6422759EB3000895936 /* Chromium_Updater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chromium_Updater.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FBE6D6312759EB2F00895936 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBAF59F2275A101700895936 /* libz.tbd in Frameworks */,
+				FBAF59F4275A10F100895936 /* SystemConfiguration.framework in Frameworks */,
+				FBAF59EE275A0EFF00895936 /* crypto.a in Frameworks */,
+				FBAF59EF275A0EFF00895936 /* ssl.a in Frameworks */,
+				FBAF59F0275A0EFF00895936 /* curl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FBAF59D6275A04E500895936 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBAF59F3275A10F100895936 /* SystemConfiguration.framework */,
+				FBAF59F1275A101600895936 /* libz.tbd */,
+				FBAF59EB275A0EFF00895936 /* crypto.a */,
+				FBAF59ED275A0EFF00895936 /* curl.a */,
+				FBAF59EC275A0EFF00895936 /* ssl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBAF59F5275A20ED00895936 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBAF59F8275A2A1D00895936 /* updater-c.png */,
+				FB7EE9BB275AD84400895936 /* updater.png */,
+				FB7EE9C0275AF47E00895936 /* cacert.pem */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		FBE6D62B2759EB2F00895936 = {
+			isa = PBXGroup;
+			children = (
+				FB7EE9BD275AE78D00895936 /* xzdec */,
+				FBE6D6362759EB2F00895936 /* Chromium Updater */,
+				FBE6D6352759EB2F00895936 /* Products */,
+				FBAF59D6275A04E500895936 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FBE6D6352759EB2F00895936 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FBE6D6342759EB2F00895936 /* Chromium Updater.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FBE6D6362759EB2F00895936 /* Chromium Updater */ = {
+			isa = PBXGroup;
+			children = (
+				FB6D5B02275AC35E00895936 /* SimpleCURL.h */,
+				FB6D5B03275AC35E00895936 /* SimpleCURL.m */,
+				FB6D5AFF275AC27000895936 /* InstanceManager.h */,
+				FB6D5B00275AC27000895936 /* InstanceManager.m */,
+				FBAF59F5275A20ED00895936 /* resources */,
+				FBE6D6372759EB2F00895936 /* AppDelegate.h */,
+				FBE6D6382759EB2F00895936 /* AppDelegate.m */,
+				FB6D5AFC275ABD9400895936 /* StatusMenuManager.h */,
+				FB6D5AFD275ABD9400895936 /* StatusMenuManager.m */,
+				FBE6D63A2759EB3000895936 /* Assets.xcassets */,
+				FBE6D63C2759EB3000895936 /* MainMenu.xib */,
+				FBE6D63F2759EB3000895936 /* Info.plist */,
+				FBE6D6402759EB3000895936 /* main.m */,
+				FBE6D6422759EB3000895936 /* Chromium_Updater.entitlements */,
+			);
+			path = "Chromium Updater";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FBE6D6332759EB2F00895936 /* Chromium Updater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FBE6D6452759EB3000895936 /* Build configuration list for PBXNativeTarget "Chromium Updater" */;
+			buildPhases = (
+				FBE6D6302759EB2F00895936 /* Sources */,
+				FBE6D6312759EB2F00895936 /* Frameworks */,
+				FBE6D6322759EB2F00895936 /* Resources */,
+				FBAF59FA275A78FB00895936 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Chromium Updater";
+			productName = "Chromium Updater";
+			productReference = FBE6D6342759EB2F00895936 /* Chromium Updater.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FBE6D62C2759EB2F00895936 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = bluebox;
+				TargetAttributes = {
+					FBE6D6332759EB2F00895936 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FBE6D62F2759EB2F00895936 /* Build configuration list for PBXProject "Chromium Updater" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FBE6D62B2759EB2F00895936;
+			productRefGroup = FBE6D6352759EB2F00895936 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FBE6D6332759EB2F00895936 /* Chromium Updater */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FBE6D6322759EB2F00895936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7EE9C1275AF47E00895936 /* cacert.pem in Resources */,
+				FBAF59F9275A2A1D00895936 /* updater-c.png in Resources */,
+				FB7EE9BC275AD84400895936 /* updater.png in Resources */,
+				FBE6D63B2759EB3000895936 /* Assets.xcassets in Resources */,
+				FBE6D63E2759EB3000895936 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FBE6D6302759EB2F00895936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB6D5B04275AC35E00895936 /* SimpleCURL.m in Sources */,
+				FB6D5B01275AC27000895936 /* InstanceManager.m in Sources */,
+				FBE6D6412759EB3000895936 /* main.m in Sources */,
+				FB6D5AFE275ABD9400895936 /* StatusMenuManager.m in Sources */,
+				FBE6D6392759EB2F00895936 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FBE6D63C2759EB3000895936 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FBE6D63D2759EB3000895936 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FBE6D6432759EB3000895936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.15;
+			};
+			name = Debug;
+		};
+		FBE6D6442759EB3000895936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx10.15;
+			};
+			name = Release;
+		};
+		FBE6D6462759EB3000895936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Chromium Updater/Chromium_Updater.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Chromium Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.b5x.Chromium-Updater";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FBE6D6472759EB3000895936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Chromium Updater/Chromium_Updater.entitlements";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Chromium Updater/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.b5x.Chromium-Updater";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FBE6D62F2759EB2F00895936 /* Build configuration list for PBXProject "Chromium Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE6D6432759EB3000895936 /* Debug */,
+				FBE6D6442759EB3000895936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FBE6D6452759EB3000895936 /* Build configuration list for PBXNativeTarget "Chromium Updater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FBE6D6462759EB3000895936 /* Debug */,
+				FBE6D6472759EB3000895936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FBE6D62C2759EB2F00895936 /* Project object */;
+}

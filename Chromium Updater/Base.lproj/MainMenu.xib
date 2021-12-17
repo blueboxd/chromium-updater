@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="instanceManager" destination="VBm-zF-Be7" id="Wfr-Hy-TJr"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="gbn-ji-a53" customClass="StatusMenuManager">
+            <connections>
+                <outlet property="canaryInstanceItem" destination="fYg-2Q-qTK" id="nYc-7s-3l1"/>
+                <outlet property="installedInstanceItem" destination="0cK-Fz-vkY" id="7UE-8J-Ow1"/>
+                <outlet property="installedInstanceUpdateItem" destination="MZM-0e-KVN" id="Cd3-1Q-cAi"/>
+                <outlet property="progressIndicator" destination="4LG-Lf-tNc" id="UHB-Ay-0D2"/>
+                <outlet property="progressMenu" destination="dTb-e8-bZf" id="pdh-oY-cjf"/>
+                <outlet property="remoteRefreshedDateItem" destination="Lag-j5-SJa" id="cfs-hB-8Tf"/>
+                <outlet property="runningInstanceItem" destination="BGf-Te-fZg" id="FsY-z5-F2R"/>
+                <outlet property="runningInstanceUpdateItem" destination="5Yc-mo-Y3b" id="Mwy-D6-AxU"/>
+                <outlet property="stableInstanceItem" destination="fsh-OO-8OK" id="Wsn-Ed-Wu0"/>
+                <outlet property="statusMenu" destination="9Ee-an-QDR" id="Pxr-YG-HBM"/>
+            </connections>
+        </customObject>
+        <customObject id="VBm-zF-Be7" customClass="InstanceManager"/>
+        <menu autoenablesItems="NO" id="9Ee-an-QDR" userLabel="Status Menu">
+            <items>
+                <menuItem title="Detected install" enabled="NO" id="V6z-t4-W4P">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="rev" id="0cK-Fz-vkY">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" autoenablesItems="NO" id="Ke1-Mj-7fV">
+                        <items>
+                            <menuItem title="Update" enabled="NO" id="MZM-0e-KVN">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="updateAction:" target="Voe-Tx-rLC" id="BVv-qN-CT5"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show in Finder" id="uM5-FO-iAt">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showInFinderAction:" target="Voe-Tx-rLC" id="c8D-cD-2Pb"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <binding destination="gbn-ji-a53" name="title" keyPath="self.installedVersionStr" id="589-Je-xVJ"/>
+                        <binding destination="gbn-ji-a53" name="enabled" keyPath="self.isInstalledDetected" id="YMG-rL-uZE"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="2hW-6N-20a"/>
+                <menuItem title="Running" enabled="NO" id="SvK-PO-d2c">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="rev" id="BGf-Te-fZg">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" autoenablesItems="NO" id="n3s-Ps-JfH">
+                        <items>
+                            <menuItem title="Update" enabled="NO" id="5Yc-mo-Y3b">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="updateAction:" target="Voe-Tx-rLC" id="Sbf-0u-fac"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show in Finder" id="kHS-QN-d1W">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showInFinderAction:" target="Voe-Tx-rLC" id="mLW-ja-Uzy"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <binding destination="gbn-ji-a53" name="enabled" keyPath="self.isRunningDetected" id="ZeC-Df-6db"/>
+                        <binding destination="gbn-ji-a53" name="title" keyPath="self.runningVersionStr" id="bLk-tz-gX6"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="vU2-yw-ABs"/>
+                <menuItem title="GitHub latest" enabled="NO" id="Lag-j5-SJa">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Canary" id="fYg-2Q-qTK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Canary" id="CFT-au-DOD">
+                        <items>
+                            <menuItem title="Get" id="Jmi-TK-dK1">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="downloadAction:" target="Voe-Tx-rLC" id="48h-eV-wS0"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <binding destination="gbn-ji-a53" name="enabled" keyPath="self.isCanaryDetected" id="fOU-zf-SIO"/>
+                        <binding destination="gbn-ji-a53" name="title" keyPath="self.remoteCanaryVersionStr" id="h3C-Yv-8Ho"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Stable" id="fsh-OO-8OK">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Stable" id="3dG-qp-u63">
+                        <items>
+                            <menuItem title="Get" tag="1" id="mYC-OE-4qS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="downloadAction:" target="Voe-Tx-rLC" id="8Gp-OJ-fYM"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <binding destination="gbn-ji-a53" name="enabled" keyPath="self.isStableDetected" id="67w-Ee-BYR"/>
+                        <binding destination="gbn-ji-a53" name="title" keyPath="self.remoteStableVersionStr" id="YtJ-gm-2dL"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Kfl-MW-IRz"/>
+                <menuItem title="Check now" id="Qf3-6t-fDz">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkNowAction:" target="Voe-Tx-rLC" id="gbh-5S-XyE"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="PWT-Ye-Nom"/>
+                <menuItem title="Quit" id="YZd-l1-8o3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-1" id="acu-kG-i2F"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="98.5" y="276"/>
+        </menu>
+        <menu autoenablesItems="NO" id="dTb-e8-bZf" userLabel="Progress Menu">
+            <items>
+                <menuItem title="Updating..." enabled="NO" id="pbI-AP-h36">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="oBT-Qh-aK7"/>
+                <menuItem title="Quit" id="uxp-bJ-bQ6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="terminate:" target="-1" id="vLj-pi-VNr"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="233" y="86"/>
+        </menu>
+        <progressIndicator wantsLayer="YES" maxValue="100" controlSize="small" style="spinning" id="4LG-Lf-tNc">
+            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <point key="canvasLocation" x="286" y="196"/>
+        </progressIndicator>
+    </objects>
+</document>
